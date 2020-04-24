@@ -50,11 +50,20 @@ body > header {
     margin-bottom: 32px;
 }
 
+hgroup h1 {
+    font-family: Signika, sans-serif;
+}
+
 /* judul */
 
 section header {
     padding-bottom: 8px;
     border-bottom: 1px solid #ddd;
+}
+
+header h3{
+    font-family: Quicksand, sans-serif;
+    font-weight: 700;
 }
 
 header h3:hover {
