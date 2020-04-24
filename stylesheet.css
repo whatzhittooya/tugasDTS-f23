@@ -51,7 +51,13 @@ body > header {
 }
 
 hgroup h1 {
+    display: inline-block;
     font-family: Signika, sans-serif;
+}
+
+hgroup h1:hover {
+    text-shadow: 0px 0px 12px #fffa;
+    cursor: default;
 }
 
 /* judul */
@@ -90,11 +96,13 @@ footer {
 }
 
 .keAtas a {
+    font-family: Quicksand;
+    font-weight: 700;
     overflow: hidden;
     float: right;
     width: 20px;
     height: 20px;
-    line-height: 24.5px;
+    line-height: 27px;
     padding: 8px;
     text-align: center;
     border-radius: 26px;
