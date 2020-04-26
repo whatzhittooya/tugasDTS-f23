@@ -20,10 +20,8 @@ a  {
 
 /*  --  general  --  */
 
-
 .wrapper {
-    display: flex;
-    flex-direction: column;
+    overflow: auto;
 }
 
 .card {
@@ -48,8 +46,16 @@ body > header {
     color: #fff;
     padding: 16px;
     background-image: linear-gradient(30deg, #926, #408);
-    margin-bottom: 32px;
     box-shadow: 0px 6px 7px #0005;
+}
+
+hgroup, .header-btn {
+    padding: 0;
+    margin: 0;
+}
+
+hgroup {
+    float: left;
 }
 
 hgroup h1 {
@@ -82,6 +88,80 @@ header h3:hover {
     text-shadow: 0px 1px 8px #5198;
 }
 
+/*atas*/
+
+.header-btn {
+  float: right;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+.header-btn a {
+  margin-top: 8px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-btn a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.top-wrapper {
+    color: #fff;
+    padding: 180px 0 100px 0;
+    background-image: url('http://getwallpapers.com/wallpaper/full/7/c/6/765090-most-popular-technology-background-images-1920x1080-hd-for-mobile.jpg');
+    background-size: cover;
+    text-align: center;
+    box-shadow: 0px 6px 7px #0005;
+    margin-bottom: 48px;
+}
+
+.top-wrapper h1 {
+    opacity: 1.0;
+    font-family: quicksand, sans-serif ;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.top-wrapper h1 ~ h1 {
+    margin-bottom: 3rem;
+}
+
+.top-wrapper p {
+    opacity: 10;
+    line-height: 1.5rem;
+    margin-bottom: 3px;
+}
+
+.bttn {
+    padding: 12px 24px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+    text-align: center;
+} 
+
+.bttn:hover {
+  opacity: 1;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
+
+.allout {
+  background-color: #239b76;
+}
 /* content */
 
 /* bagian utama*/
@@ -111,10 +191,29 @@ header h3:hover {
     width: 128px;
     height: 128px;
     border-radius: 65px;
-    background-image: url("https://pbs.twimg.com/media/EWehAVtU0AAnYV0?format=jpg&name=900x900");
     background-size: cover;
     margin: 12px auto;
     transition: all 0.6s ease-out;
+}
+
+.meizir {
+    background-image: url('https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png ');
+}
+
+.mudlofar {
+    background-image: url('https://cdn.discordapp.com/avatars/699771795905183804/490eec47f02883197857e508d38972a2.png');
+}
+
+.linda {
+    background-image: url('https://cdn.discordapp.com/avatars/699723808981909624/2f14ee27fbab6279fa7dc389c1fcbf22.png');
+}
+
+.margareta{
+    background-image: url('https://discordapp.com/assets/6debd47ed13483642cf09e832ed0bc1b.png');
+}
+
+.firza {
+    background-image: url('https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png ');
 }
 
 .avatar:hover {
@@ -135,6 +234,56 @@ header h3:hover {
     border: .5px solid #8884;
 }
 
+
+.middle{
+  position: relative;
+  top: 90%;
+  transform: translateY(-50%);
+  width: 13%;
+  text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(45deg, #992266, #450088);
+    margin: 5px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 1px #00000070;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.btn i{
+    line-height: 1.9rem;
+    font-size: .9rem;
+     transition: 0.3s linear;
+}
+.btn:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  color: #fff;
+  background-image: linear-gradient(45deg, #992266, #450088);
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+.clear {
+	clear: left;
+}
 
 /* footer */
 
@@ -182,6 +331,7 @@ footer {
 
 
 
+
 /*  ==  RESPONSIVE  ==  */
 
 /*  --  mobile  --  */
@@ -191,6 +341,14 @@ footer {
         font-size: .9rem;
     }
     
+    .header-btn {
+        display: none;
+    }
+
+    .top-wrapper h1 {
+        font-size: 2rem;
+    }
+
     .footerLogo {
         padding: 18px;
         width: 25%;
@@ -199,6 +357,10 @@ footer {
     .anggota {
         width: 86%;
     }
+	.middle {
+		width: 50%;
+		float: left;
+	}
 }
 
 /*  --  tablet  --  */
@@ -231,6 +393,7 @@ footer {
 .anggota {
         width: 33.3%;
     }
+
 }
 
 
