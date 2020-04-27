@@ -1,4 +1,4 @@
-# tugas DTS Kelompok F23_DTS20
+# Tugas DTS Kelompok F23_DTS20
 
 Nama anggota kelompok:
 - Meizir
