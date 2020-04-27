@@ -9,7 +9,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #eee;
+    background-color: #ebe0eb;
 }
 
 
@@ -21,7 +21,8 @@ a  {
 /*  --  general  --  */
 
 .wrapper {
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .card {
@@ -36,7 +37,6 @@ a  {
     box-shadow: 0px 4px 8px #926a;
 }
 
-
 /* header halaman */
 
 body > header {
@@ -45,13 +45,17 @@ body > header {
     top: 0;
     color: #fff;
     padding: 16px;
-    background-image: linear-gradient(30deg, #926, #408);
-    box-shadow: 0px 6px 7px #0005;
+    background-image: linear-gradient(30deg, #992266, #440088);
+    box-shadow: 0px 6px 7px #4445;
 }
 
-hgroup, .header-btn {
-    padding: 0;
-    margin: 0;
+body > header:hover {
+    backdrop-filter: saturate(200%) blur(8px);
+    background-image: linear-gradient(30deg, #992266d8, #440088d8);
+}
+
+header .wrapper {
+    flex-direction: row;
 }
 
 hgroup {
@@ -63,8 +67,8 @@ hgroup h1 {
     font-family: Signika, sans-serif;
 }
 
-hgroup h1:hover {
-    text-shadow: 0px 0px 12px #fffa;
+body > header:hover hgroup h1 {
+    text-shadow: 0px 0px 12px #fffb;
     cursor: default;
 }
 
@@ -79,12 +83,9 @@ section header {
 header h3{
     cursor: default;
     display: inline-block;
+    color: #408;
     font-family: Quicksand, sans-serif;
     font-weight: 700;
-}
-
-header h3:hover {
-    color: #408;
     text-shadow: 0px 1px 8px #5198;
 }
 
@@ -94,9 +95,11 @@ header h3:hover {
   float: right;
   height: 3rem;
   line-height: 3rem;
+  margin-left: auto;
 }
 
 .header-btn a {
+    font-weight: bold;
   margin-top: 8px;
   padding: 0 25px;
   color: white;
@@ -106,53 +109,50 @@ header h3:hover {
 }
 
 .header-btn a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #fff3;
 }
 .top-wrapper {
+    margin-top: 24px;
     color: #fff;
-    padding: 180px 0 100px 0;
-    background-image: url('http://getwallpapers.com/wallpaper/full/7/c/6/765090-most-popular-technology-background-images-1920x1080-hd-for-mobile.jpg');
+    padding: 86px 0 64px 0;
+    background-image: url('https://wallpapercave.com/wp/wp2003043.jpg');
     background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
     text-align: center;
     box-shadow: 0px 6px 7px #0005;
     margin-bottom: 48px;
 }
 
 .top-wrapper h1 {
-    opacity: 1.0;
-    font-family: quicksand, sans-serif ;
+    font-family: quicksand, sans-serif;
     font-weight: 700;
-    font-size: 48px;
-    letter-spacing: 5px;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.top-wrapper h1 ~ h1 {
+.judul + .judul {
     margin-bottom: 3rem;
-}
-
-.top-wrapper p {
-    opacity: 10;
-    line-height: 1.5rem;
-    margin-bottom: 3px;
 }
 
 .bttn {
     padding: 12px 24px;
     color: white;
     display: inline-block;
-    opacity: 0.8;
     border-radius: 4px;
     text-align: center;
+    transition: all .5s ease-out;
 } 
 
 .bttn:hover {
-  opacity: 1;
+    border-radius: 1.3rem;
 }
 
 .btn-wrapper {
-  text-align: center;
-  margin: 20px 0;
+    padding: 18px 0;
+    backdrop-filter: saturate(175%) blur(14px);
+    text-align: center;
+    margin: 20px 0;
 }
 
 .btn-wrapper p {
@@ -160,7 +160,7 @@ header h3:hover {
 }
 
 .allout {
-  background-color: #239b76;
+  border: .5px solid #fff;
 }
 /* content */
 
@@ -186,6 +186,11 @@ header h3:hover {
     background-color: #4081;
     margin: 14px 8px;
 }
+
+.container-anggota:hover {
+    background-color: #ae5eff36;
+}
+
 
 .avatar {
     width: 128px;
@@ -216,7 +221,7 @@ header h3:hover {
     background-image: url('https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png ');
 }
 
-.avatar:hover {
+.container-anggota:hover .avatar {
     border-radius: 8px;
     box-shadow: 0px 0px 14px 0px #926c;
 }
@@ -235,12 +240,17 @@ header h3:hover {
 }
 
 
-.middle{
-  position: relative;
-  top: 90%;
-  transform: translateY(-50%);
-  width: 13%;
-  text-align: center;
+#logoOA img { 
+    width: 25%;
+    display: block;
+    margin: 0px auto;
+}
+
+#tentang p {
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    margin: 14px;
 }
 
 .btn {
@@ -249,7 +259,7 @@ header h3:hover {
     height: 30px;
     background-image: linear-gradient(45deg, #992266, #450088);
     margin: 5px;
-    border-radius: 50%;
+    border-radius: 25%;
     box-shadow: 0px 0px 8px 1px #00000070;
     color: #fff;
     overflow: hidden;
@@ -258,8 +268,13 @@ header h3:hover {
 .btn i{
     line-height: 1.9rem;
     font-size: .9rem;
-     transition: 0.3s linear;
+    transition: 0.3s linear;
 }
+
+.btn:hover {
+    border-radius: 50%;
+}
+
 .btn:hover i{
   transform: scale(1.3);
   color: #f1f1f1;
@@ -289,9 +304,14 @@ header h3:hover {
 
 footer {
     color: #fff;
-    padding: 24px;
+    padding: 36px 14px;
     background-image: linear-gradient(-30deg, #000, #444);
-    margin-top: 32px;
+    margin-top: 42px;
+    overflow: auto;
+}
+
+.footerLogo {
+    float: left;
 }
 
 .footerLogo span {
@@ -325,11 +345,35 @@ footer {
 
 .keAtas a:hover {
     color: #70a;
-    background-image: linear-gradient(30deg, #fff, #fff);
+    background-image: linear-gradient(#fff8, #fff8);
+    backdrop-filter: blur(6px);
     box-shadow: 0px 0px 4px 3px #926;
 }
 
+ul {
+    margin: 0;
+    padding-left: 32px;
+    padding-bottom: 8px;
+}
 
+li {
+    list-style: square;
+}
+
+li a {
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+    color: #444;
+    border-radius: 4px;
+    background-color: #4084;
+    margin: 6px;
+}
+
+li a:hover {
+    color: #fff;
+    background-color: #408;
+}
 
 
 /*  ==  RESPONSIVE  ==  */
@@ -345,8 +389,14 @@ footer {
         display: none;
     }
 
+    .top-wrapper {
+        background-size: 220vmax;
+        padding-bottom: 48px;
+    }
+
     .top-wrapper h1 {
         font-size: 2rem;
+        letter-spacing: initial;
     }
 
     .footerLogo {
@@ -357,10 +407,8 @@ footer {
     .anggota {
         width: 86%;
     }
-	.middle {
-		width: 50%;
-		float: left;
-	}
+    
+
 }
 
 /*  --  tablet  --  */
@@ -372,23 +420,22 @@ footer {
         margin: 0px auto;
     }
 
+    .top-wrapper h1 {
+        font-size: 3rem;
+    }
+
     .anggota {
         width: 50%;
     }
 
-/* footer */
-
-    footer {
-        overflow: auto;
-    }
-
-    .footerLogo {
-        float: left;
-    }
 
 }
 
 @media screen and (min-width:720px)  {
+
+    .top-wrapper h1 {
+        letter-spacing: .75rem;
+    }
 
 .anggota {
         width: 33.3%;
@@ -400,6 +447,8 @@ footer {
 /*   pc   */
 
 @media screen and (min-width:960px) {
+    
+
     .extra {
         box-sizing: border-box;
         width: 50%;
@@ -413,6 +462,11 @@ footer {
 }
 
 @media screen and (min-width:1153px) {
+    
+    .top-wrapper h1 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
     
     .anggota {
         width: 20%;
